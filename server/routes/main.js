@@ -4,9 +4,9 @@ const router = express.Router();
 const mainLayout = '../views/layouts/main';
 
 // GET HOME 
-router.get('', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
-      res.render('index', { 
+      res.render('index.ejs', { 
         currentRoute: '/',
         layout: mainLayout
       });
