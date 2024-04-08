@@ -10,3 +10,4 @@ toggleBtn.onclick = () => {
     ? "fa fa-times"
     : "fa-solid fa-bars"
 }
+

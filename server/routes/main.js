@@ -4,7 +4,7 @@ const router = express.Router();
 const mainLayout = '../views/layouts/main';
 
 // GET HOME 
-router.get('/', async (req, res) => {
+router.get('', async (req, res) => {
     try {
       res.render('index.ejs', { 
         currentRoute: '/',
@@ -22,6 +22,20 @@ router.get('/about', async (req, res) => {
     try {
       res.render('about', { 
         currentRoute: '/privacy-about',
+        layout: mainLayout
+      });
+  
+    } catch (error) {
+      console.log(error);
+    }
+  
+  });
+
+// GET INTERNSHIP 
+router.get('/internship', async (req, res) => {
+    try {
+      res.render('intership', { 
+        currentRoute: '/internship',
         layout: mainLayout
       });
   
